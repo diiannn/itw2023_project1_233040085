@@ -339,10 +339,6 @@ footer .nav-links {
   .logo {
     display: none;
   }
-  .nav-links {
-    justify-content: center;
-    width: 100%;
-  }
 }
 
 /* Max-Width(768px) */
@@ -411,9 +407,5 @@ footer .nav-links {
     width: 90%;
     margin: auto;
     margin-top: 9rem;
-  }
-  footer .nav-links {
-    width: 100%;
-    justify-content: space-between;
   }
 }
