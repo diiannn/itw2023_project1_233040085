@@ -209,9 +209,9 @@ header {
 /*End About  */
 
 /* skills */
-/* skills*/
+
 .skills {
-  padding: 100px;
+  padding: 40px;
 }
 .skills h2 {
   color: #000000;
@@ -279,20 +279,39 @@ header {
 /* End hobby */
 
 /*  Contact */
-.contact-container {
-  max-width: 32rem;
+
+input[type='text'],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
   border: 1px solid var(--color-dark-variant);
-  padding: 24px;
-  border-radius: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
 }
-.email,
-.linkedin {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+
+input[type='submit'] {
+  background-color: var(--color-dark-variant);
+  color: white;
+  padding: 12px 20px;
+  border: 1px solid var(--color-dark-variant);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type='submit']:hover {
+  background-color: white;
+  color: #000000;
+  font-weight: 700;
+}
+
+.contact-container {
+  border-radius: 5px;
+  width: 70%;
+  padding: 20px;
 }
 /* End Contact */
 
@@ -300,14 +319,6 @@ header {
 footer {
   margin-top: 9rem;
   padding: 30px;
-  text-align: center;
-}
-footer .nav-links {
-  justify-content: center;
-  margin-bottom: 3rem;
-}
-
-.icon p {
   text-align: center;
 }
 
@@ -333,14 +344,6 @@ footer .nav-links {
   }
 }
 
-/* Max-Width(991px) */
-@media (max-width: 991px) {
-  /*Nav  */
-  .logo {
-    display: none;
-  }
-}
-
 /* Max-Width(768px) */
 @media (max-width: 768px) {
   h1 {
@@ -355,8 +358,12 @@ footer .nav-links {
   h3 {
     font-size: 24px;
   }
-  .arrow {
-    right: 5%;
+  .logo {
+    display: none;
+  }
+  /* nav */
+  .nav-container {
+    justify-content: center;
   }
   /* Header  */
   .header-container {
@@ -392,8 +399,9 @@ footer .nav-links {
   }
   /* Nav*/
   .nav-links {
-    gap: 0;
+    gap: 1;
     justify-content: space-between;
+    padding: 60px;
   }
   /*  Contact*/
   .contact-container {
