@@ -73,8 +73,9 @@ a:hover {
 .btn {
   display: inline-block;
   width: fit-content;
+
   padding: 1rem;
-  width: 8.4rem;
+  width: 300px;
   border-radius: 2rem;
   cursor: pointer;
   color: var(--color-black);
@@ -129,10 +130,15 @@ nav {
   align-items: center;
   height: 100%;
 }
+/* logo */
 .logo {
-  font-size: 32px;
-  color: var(--color-black) !important;
-  text-decoration: none !important;
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--color-black);
+  text-decoration: none;
+}
+.logo span {
+  color: var(--color-dark-variant);
 }
 .nav-links {
   display: flex;
@@ -210,76 +216,86 @@ header {
 
 /* skills */
 
-.skills {
-  padding: 40px;
-}
-.skills h2 {
-  color: #000000;
-  padding-bottom: 10px;
-  font-size: 40px;
-  text-align: center;
-}
-
-.skills-item {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-  align-items: center;
-  gap: 2.2rem;
-  text-align: center;
-  margin-top: 4rem;
-}
-
-.skills-box {
-  padding: 45px 30px;
-  border-radius: 1rem;
-  border: 1px solid;
-  cursor: pointer;
-  transition: all ease 0.5s;
-}
-
-.skills img {
-  border-radius: 20px;
-}
-
-.skills h3 {
-  font-size: 23px;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.skills p {
-  font-size: 20px;
-}
-
-.skills-box:hover {
-  transform: translateY(-8px);
-  border: 1px solid #bebbb8;
-}
-/* End skills */
-
-/*  hobby */
-.hobby-container {
+.skills-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
-.hobby {
+.skills {
   padding: 24px;
   border: 1px solid var(--color-dark-variant);
   border-radius: 30px;
   text-align: center;
 }
-.hobby img {
+.skills img {
   border-radius: 30px;
   margin-bottom: 1rem;
 }
-.hobby .btn {
+
+/* bar skills */
+.container-bar {
+  height: 30px;
+  width: 100%;
+  border-radius: 30px;
+  background-color: #ddd;
+}
+.skills-html {
+  height: 30px;
+  width: 50%;
+  text-align: center;
+  padding: 5px;
+  border-radius: 30px;
+  background-color: rgb(234, 205, 152);
+}
+.skills-css {
+  height: 30px;
+  width: 40%;
+  text-align: center;
+  padding: 5px;
+  border-radius: 30px;
+  background-color: rgb(234, 205, 152);
+}
+.skills-drawing {
+  height: 30px;
+  width: 85%;
+  text-align: center;
+  padding: 5px;
+  border-radius: 30px;
+  background-color: rgb(234, 205, 152);
+}
+.skills:hover {
+  transform: translateY(-9px);
+  border: 2px solid #b99171;
+}
+/* End skills */
+
+/*project */
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.project {
+  padding: 24px;
+  border: 1px solid var(--color-dark-variant);
+  border-radius: 30px;
+  text-align: center;
+}
+.project img {
+  border-radius: 30px;
+  margin-bottom: 1rem;
+}
+.project .btn {
   justify-content: center;
 }
+.project:hover {
+  transform: translateY(-15px);
+  border: 2px solid rgb(70, 29, 29);
+}
+
 /* End hobby */
 
 /*  Contact */
-
 input[type='text'],
 select,
 textarea {
@@ -298,7 +314,7 @@ input[type='submit'] {
   color: white;
   padding: 12px 20px;
   border: 1px solid var(--color-dark-variant);
-  border-radius: 4px;
+  border-radius: 19px;
   cursor: pointer;
 }
 
@@ -310,7 +326,7 @@ input[type='submit']:hover {
 
 .contact-container {
   border-radius: 5px;
-  width: 70%;
+  width: 55%;
   padding: 20px;
 }
 /* End Contact */
@@ -326,7 +342,7 @@ footer {
 
 /* Media*/
 /* Max-Width(1024px) */
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   /* About  */
   .about-container {
     gap: 30px;
@@ -338,14 +354,18 @@ footer {
   .container {
     gap: 30px;
   }
-  /* Hobby  */
-  .hobby-container {
+  /* skills  */
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* project  */
+  .project-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* Max-Width(768px) */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   h1 {
     font-size: 38px;
   }
@@ -385,15 +405,17 @@ footer {
   .basic-edu {
     gap: 10px;
   }
-
-  /*Hobby */
-  .hobby-container {
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+  /*project */
+  .project-container {
     grid-template-columns: 1fr;
   }
 }
 
 /* Max-Width(600px) */
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   a {
     font-size: 18px;
   }
@@ -405,10 +427,10 @@ footer {
   }
   /*  Contact*/
   .contact-container {
-    flex-direction: column;
-    gap: 1rem;
+    width: 70%;
   }
-  /*  footer*/
+  /* footer */
+
   footer {
     padding: 0;
     padding-bottom: 20px;
