@@ -423,7 +423,11 @@ footer {
   .nav-links {
     gap: 1;
     justify-content: space-between;
-    padding: 60px;
+    padding: 10px 10px 10px 5px;
+  }
+
+  header {
+    padding: 200px 10px 10px 5px;
   }
   /*  Contact*/
   .contact-container {
